@@ -43,6 +43,7 @@ CFLAGS_COM          =
 CXXFLAGS_COM        =
 LIB_LDFLAGS_COM     =
 BIN_LDFLAGS_COM     =
+LDADD_COM           =
 
 ACLOCAL_AMFLAGS     = -I m4
 pkgconfigdir        = $(libdir)/pkgconfig
@@ -77,11 +78,14 @@ CFLAGS_COM          += $(_remove_unuse_func)
 CXXFLAGS_COM        += $(_remove_unuse_func)
 BIN_LDFLAGS_COM     += -Wl,--gc-sections
 
+LDADD_COM           +=
+
 export CPPFLAGS_COM
 export CFLAGS_COM
 export CXXFLAGS_COM
 export LIB_LDFLAGS_COM
 export BIN_LDFLAGS_COM
+export LDADD_COM
 
 # ------------------
 # make install files
